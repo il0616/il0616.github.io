@@ -1,0 +1,18 @@
+{% if page.links[0] %}
+<p class="page__taxonomy">
+  <strong><i class="fas fa-fw fa-link" aria-hidden="true"></i>
+    {{ site.data.ui-text[site.locale].related_links_label | default: "Related Links:" }} </strong>
+  {% for link in page.links %}
+  <a href="{{ link.url }}" title="{{ link.url }}"
+    class="page__taxonomy-item"><span>{{ link.name | default: link.url }}</span></a>
+  {% endfor %}
+</p>
+{% endif %}
+
+{% if site.tag_archive.type and page.tags[0] %}
+{% include tag-list.html %}
+{% endif %}
+
+{% if site.category_archive.type and page.categories[0] %}
+{% include category-list.html %}
+{% endif %}
