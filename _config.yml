@@ -4,7 +4,7 @@ email: il0616@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
   주로 Programming 관련 정보를 올리는 블로그.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://il0616.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
+url: https://il0616.github.io # the base hostname & protocol for your site, e.g. http://example.com
 repository: il0616/il0616.github.io
 locale: ko
 
@@ -14,6 +14,7 @@ minimal_mistakes_skin: dark
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-sitemap
 
 include:
   - _pages
