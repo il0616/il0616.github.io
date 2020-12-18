@@ -35,7 +35,7 @@ comments:
     issue_term: pathname
 
 analytics:
-  provider: google
+  provider: google-gtag
   google:
     tracking_id: G-WD365KFNJZ
     anonymize_ip: false # default
