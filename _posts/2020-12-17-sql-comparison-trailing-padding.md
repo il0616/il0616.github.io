@@ -23,8 +23,8 @@ SELECT * FROM student WHERE name = 'redone '
 하지만, 두 SQL의 결과는 많은 RDBMS(`MySQL(MariaDB)`, `Oracle`, `MS SQL`)에서는 동일하다.
 해당 RDBMS에서는 `ANSI/ISO SQL-92` 사양에 맞게 구현했기 때문이다. 아래는 발췌한 부분이다.
 
-```
-a) If the length in characters of X is not equal to the length
+
+>a) If the length in characters of X is not equal to the length
   in characters of Y, then the shorter string is effectively
   replaced, for the purposes of comparison, with a copy of
   itself that has been extended to the length of the longer
@@ -34,8 +34,7 @@ a) If the length in characters of X is not equal to the length
   implementation-dependent character different from any char-
   acter in the character set of X and Y that collates less
   than any string under CS. Otherwise, the pad character is a
-  <space>.
-```
+  \<space>.
 
 비교할 string의 길이가 맞지 않는 경우, 동일길이로 맞추기 위해 짧은 string의 뒷부분에 패딩처리하였기 때문에 맨 위의 2가지 SQL의 결과는 동일하게 나온다.  
 제목에서는 WHERE 절에 한정해서 적어두었지만, WHERE절에서 뿐만 아니라 모든 비교연산에서 동일하게 패딩 처리된다.
